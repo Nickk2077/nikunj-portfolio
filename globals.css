@@ -1,0 +1,33 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+export default function Footer() {
+  return (
+    <footer className="relative border-t border-white/5 py-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <span className="font-display font-bold text-lg text-gradient-violet">NZ</span>
+            <span className="w-px h-4 bg-white/10" />
+            <span className="font-mono text-xs text-white/25">Nikunj Zapadiya · Creative Designer</span>
+          </div>
+
+          <p className="font-mono text-[10px] text-white/20">
+            © {new Date().getFullYear()} All rights reserved · Built with passion
+          </p>
+
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="w-10 h-10 rounded-full glass border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-violet-500/40 transition-all duration-300"
+            aria-label="Back to top"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+  )
+}
